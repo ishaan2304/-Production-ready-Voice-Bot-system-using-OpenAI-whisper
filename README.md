@@ -294,37 +294,6 @@ voicebot/
 
 ---
 
-## ⚙️ Configuration
-
-All settings live in `config/settings.yaml` — no hardcoded values in code:
-
-```yaml
-asr:
-  model_name: "openai/whisper-base"   # tiny/base/small/medium
-  device: "cpu"                        # or "cuda" for GPU
-
-intent:
-  confidence_threshold: 0.5           # below this → fallback response
-
-tts:
-  engine: "gtts"                      # or "pyttsx3" for offline
-  slow: false                         # true for slower speech
-```
-
-**To add or edit responses**, just edit `config/response_templates.yaml`:
-
-```yaml
-intents:
-  order_status:
-    responses:
-      - "Your custom response here"
-      - "Another variation here"
-    follow_up: "Is there anything else?"
-```
-
-No Python code changes needed!
-
----
 
 ## 🧪 Running Tests
 
